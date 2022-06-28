@@ -54,9 +54,6 @@ img{
     color: var(--rojo-brillante);
 }
 
-body {
-
-}
 
 
 /* Estilos Generales */
@@ -92,6 +89,7 @@ header img{
     position: relative;
     left: 10%;
 }
+
 
 /*main*/
 
@@ -195,8 +193,10 @@ header img{
     font-size: 1.8rem;
     font-weight: 700;
     padding: 0 25px;
-    position: relative;
-    left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .mainBot p{
@@ -210,16 +210,15 @@ header img{
 .mainBot img {
     margin-top: 60px;
     display: flex;
-    position: relative;
-    left: 35%;
     height: 70px;
     width: 70px;
 }
 
 .mainBot #button {
     margin-top: 120px;
-    position: relative;
-    left: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mainBot h3{
@@ -228,11 +227,33 @@ header img{
     font-size: 1.2rem;
     font-weight: 700;
     padding: 0 25px;
-    position: relative;
-    left: 26%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+/*Tarjetas*/
 .tarjeta1{
     display: none;
+}
+
+
+.tarjeta2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tarjeta2 p {
+    width: 100%;
+}
+
+.IMG {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .tarjeta3{
@@ -250,24 +271,24 @@ footer{
 .footerTop {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--rojo-brillante);
     padding: 100px 16px;
 }
 
 .footerTop h2 {
     color: var(--variante-gris-claro);
+    width: 100%;
     font-size: 2.1rem;
     font-weight: 700;
     padding: 0 25px;
-    position: relative;
-    left: 5%;
     text-align: center;
 }
 
 .footerTop a {
     margin-top: 40px;
-    position: relative;
-    left: 32%;
+    display: flex;
+
 }
 
 .footerBot {
@@ -280,6 +301,9 @@ footer{
 
 .formulario {
     height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .formulario input  {
@@ -290,10 +314,10 @@ footer{
     width: 70%;
 }
 
-.fLogo {
-    width: 35%;
-    height: 100%;
+.formulario a {
+    height: 50px;
 }
+
 
 .fb-cont2 {
     display: flex;
@@ -311,15 +335,21 @@ footer{
 .FRight {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-around;
+}
+
+.FRight .fLogo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .FRight .fLogo img{
     margin-top: 60px;
     width: 200px;
     height: 100%;
-    position: relative;
-    left: 45%;
+    display: flex;
+    
 }
 
 
@@ -336,22 +366,320 @@ footer{
 
 .footerBot p {
     color: var(--azul-grisaceo-oscuro);
+    display: flex;
+    justify-content: center;
     position: relative;
-    left: 5%;
     top: 60px;
 }
 
 .fSocial p {
     display: none;
 }
-/*
- @media (min-width: 420px){
-    .navegacion{
+
+
+@media (min-width: 958px){
+
+    /*Comenzamos ajustando el HEADER y sus elementos*/
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 40px 25px;
+        width: 100%;
+        height: 20vh;
+    }
+    
+    header img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3vh;
+        width: 15ch;
+        position: relative;
+        left: 5%;
+    }
+    
+    header .nav{
+        display: block;
+    }
+    
+    header .nav ul li {
+        display: inline;
+        padding: 9px;
+    }
+
+    header .nav ul li:hover {
+        color: rgb(31, 31, 235);
+    }
+
+    header .borange1 {
+        display: inline;
+        background-color: var(--rojo-brillante);
+        color: white;
+        height: 4vh;
+        width: 15ch;
+    }
+    
+    header .button {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        height: 5vh
+    }
+
+    header .button:hover {
+        background-color: var(--azul-oscuro);
+    }
+
+
+
+    header .menu-hamburguesa {
+        display: none;
+    }
+    /*Finalizamos los estilos de HEADER*/
+
+    /*Comenzamos a modificar los estilos del MAIN y sus Elementos*/
+
+    /*Seccion 1*/
+
+    .mainTop1 {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .mainTop1-cont1{
+        display: flex;
+        width: 40%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 10%;
+    }
+
+    .mainTop1-cont1 h1 {
+        display: flex;
+        margin-right: 17%;
+        width: 100%;
+        font-size: 45px;
+        text-align: left;
+    }
+
+    .mainTop1-cont1 p {
+        text-align: left;
+        font-size: medium;
+        width: 75%;
+        margin: 0%;
+    }
+
+    .mainTop1-cont1 .button {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        height: 5vh
+    }
+
+    .mainTop1-cont1 .button:hover{
+        background-color: var(--azul-oscuro);
+    }
+
+    .mainTop1-cont1 a {
+        display: flex;
+        margin-bottom: 10%;
+    }
+
+    .mainTop1-cont2{
+        display: flex;
+        width: 40%;
+        height: auto;
+        margin-right: 10%;
+
+    }
+
+    /*Seccion 2*/
+
+    .mainTop2 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+        .mainTop2-cont3 {
+        display: flex;
+        width: 35%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        margin-left: 8%;
+    }
+
+    .mainTop2-cont3 h2 {
+        display: flex;
+        width: 100%;
+        font-size: 32px;
+        margin-top: 9%;
+        text-align: left;
+    }
+    .mainTop2-cont3 p {
+        display: flex;
+        margin-bottom: 80%;
+    }
+
+
+    .mainTop2-cont4{
+        display: flex;
+        width: 40%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 10%;
+    }
+
+
+    .mainTop2-cont4 .item span:hover{
+        background-color: var(--azul-oscuro);
+    }
+
+    /*Seccion 3*/
+
+
+    .mainBot{
+        width: 100%;
         display: flex;
     }
 
-    .menu-hamburguesa{
-        display: none;
+    .conTarjeta {
+        display: flex;
+    }
+
+    .tarjeta1 {
+        display: block;
+    }
+
+    .tarjeta3 {
+        display: block;
+    }
+
+    .button:hover {
+        background-color: var(--azul-oscuro);
+    }
+
+
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /*Footer TOP*/
+
+    .footerTop {
+        display: flex;
+        height: 5vh;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 10%;
+    }
+
+    .footerTop h2 {
+        display: flex;
+        text-align: start;
+        width: 40%;;
+    }
+
+    .footerTop a {
+        display: flex;
+    }
+
+    /*Footer BOT*/
+
+    .footerBot {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /*Izquierda*/
+    .FRight {
+        height: auto;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .FRight .fLogo {
+        display: flex;
+        width: 100%;
+        height: 5vh;
+    } 
+        
+    .FRight .fLogo img {
+        display: flex;
+        justify-content: center;
+        margin: 10%;
+    }
+
+    .FRight .fSocial {
+        display: flex;
+        width: 100%;
+        padding: 10%;
+    }
+
+    .FRight .fSocial a {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    /*Centro*/
+    .fb-cont2{
+        width: 30%;
+    }
+
+    .fb-cont2 li:hover{
+        color: var(--rojo-brillante);
+    }
+
+    /*DER*/
+
+    .formulario {
+        display: flex;
+        width: 30%;
+    }
+
+    .formulario input {
+        width: 48%;
+    }
+
+    /*Final*/
+    .footerBot p {
+        position: relative;
+        left: 30%;
+        top: -30%;
+        font-size: small;
+        order: 1;
     }
 }
-*/
+
+
+
+
+/*@media (condicion mi-width: 560px){
+    /* Mis reglas de estilo */
+    /* }
+/**/
